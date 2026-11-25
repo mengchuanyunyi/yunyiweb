@@ -1,0 +1,1 @@
+.practice-grid{top:32px!important}.sound-words>div small{top:68px!important}.sound-words>div strong{top:64%!important}.sound-words>div:hover small,.sound-words>div:focus-within small{top:74px!important}.sound-words>div:hover strong,.sound-words>div:focus-within strong{top:calc(32px + 96px + (var(--practice-width) / 2) - 7px)!important}

@@ -1,0 +1,25 @@
+(()=>{
+  const icon='<svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 18H15L25 10Q27 9 27 12V36Q27 39 25 38L15 30H8Q6 30 6 28V20Q6 18 8 18Z" fill="currentColor"/><path class="audio-wave audio-wave-inner" d="M33 17Q40 24 33 31" fill="none" stroke="var(--speaker-wave,currentColor)" stroke-width="3" stroke-linecap="round"/><path class="audio-wave audio-wave-outer" d="M38 11Q50 24 38 37" fill="none" stroke="var(--speaker-wave,currentColor)" stroke-width="3" stroke-linecap="round"/></svg>';
+  const fileName=sound=>({'ü':'v','üe':'ve','ün':'vn'}[sound]||sound);
+  const source=(sound,category)=>`assets/audio/${category}/${fileName(sound)}.m4a`;
+  const soundOn=()=>localStorage.getItem('zijue-pronunciation-v2')!=='off';
+  const player=new Audio();player.preload='none';let activeTarget=null;
+  const status=document.createElement('span');status.className='audio-status';status.setAttribute('role','status');status.setAttribute('aria-live','polite');document.body.append(status);
+  const reset=()=>{if(activeTarget){activeTarget.classList.remove('is-playing');activeTarget.setAttribute('aria-pressed','false')}activeTarget=null};
+  const stop=()=>{player.pause();player.currentTime=0;reset()};
+  const configure=(element,sound,category)=>{if(!element)return;element.dataset.audioSrc=source(sound,category);element.dataset.audioSound=sound};
+  const play=element=>{if(!soundOn()){status.textContent='声音已关闭，请先打开右上角的发音开关';return}const src=element.dataset.audioSrc;if(!src)return;if(activeTarget===element&&!player.paused){stop();return}stop();activeTarget=element;element.classList.add('is-playing');element.setAttribute('aria-pressed','true');player.src=src;player.currentTime=0;player.play().then(()=>status.textContent=`正在播放 ${element.dataset.audioSound} 发音`).catch(()=>{status.textContent='音频暂时无法播放';reset()})};
+  const bindLetter=(element,sound,category)=>{configure(element,sound,category);element.classList.add('audio-letter');element.setAttribute('aria-label',`${sound}：打开图解并播放发音`);element.addEventListener('click',()=>play(element))};
+  const makeViewerButton=(title,category)=>{const button=document.createElement('button');button.type='button';button.className='audio-trigger viewer-audio-trigger';button.innerHTML=icon;button.setAttribute('aria-pressed','false');title.after(button);const sync=()=>{const sound=title.textContent.trim();configure(button,sound,category);button.setAttribute('aria-label',`播放 ${sound} 的标准发音`)};sync();new MutationObserver(sync).observe(title,{childList:true,characterData:true,subtree:true});return button};
+  document.addEventListener('click',event=>{const button=event.target.closest('.audio-trigger');if(!button)return;event.preventDefault();event.stopPropagation();play(button)},true);
+  player.addEventListener('ended',reset);player.addEventListener('error',()=>{status.textContent='音频加载失败';reset()});window.addEventListener('zijue:soundchange',event=>{if(!event.detail.on)stop()});
+  document.querySelectorAll('[data-initial]').forEach(letter=>bindLetter(letter,letter.dataset.initial,'initials'));
+  document.querySelectorAll('[data-pronunciation]').forEach(letter=>bindLetter(letter,letter.dataset.pronunciation,'finals'));
+  document.querySelectorAll('.whole-grid>span').forEach(item=>{const sound=item.textContent.trim();configure(item,sound,'syllables');item.classList.add('audio-letter');item.tabIndex=0;item.setAttribute('role','button');item.setAttribute('aria-label',`播放 ${sound} 的标准发音`);item.addEventListener('click',()=>play(item));item.addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();play(item)}})});
+  const initialTitle=document.querySelector('[data-initial-title]'),finalTitle=document.querySelector('[data-pronunciation-title]');if(initialTitle)makeViewerButton(initialTitle,'initials');if(finalTitle)makeViewerButton(finalTitle,'finals');
+  const pairAudioButtons=[...document.querySelectorAll('[data-pair-audio]')];
+  const syncPairAudio=(left='an',right='ang')=>pairAudioButtons.forEach(button=>{const sound=button.dataset.pairAudio==='left'?left:right;button.innerHTML=icon;configure(button,sound,'finals');button.setAttribute('aria-label',`播放 ${sound} 的标准发音`)});
+  const activePair=document.querySelector('[data-pair].active')?.dataset.pair.split('-');syncPairAudio(activePair?.[0],activePair?.[1]);
+  document.querySelectorAll('[data-pair]').forEach(tab=>tab.addEventListener('click',()=>{const [left,right]=tab.dataset.pair.split('-');syncPairAudio(left,right)}));
+  window.zijueAudio={play,stop,update:(element,sound,category='finals')=>configure(element,sound,category),icon};
+})();

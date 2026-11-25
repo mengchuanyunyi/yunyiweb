@@ -1,0 +1,48 @@
+.sound-contrast{grid-template-columns:repeat(var(--sound-count,2),minmax(0,1fr))}
+.sound-contrast article{min-width:0;min-height:380px;padding:28px 30px}
+.sound-contrast .sound-heading{margin:36px 0 26px;gap:18px}
+.sound-contrast .sound-heading strong{font-size:124px;white-space:nowrap}
+.three-sounds .sound-contrast .sound-heading{gap:10px}
+.three-sounds .sound-contrast .sound-heading strong{font-size:clamp(60px,5.8vw,88px)}
+.sound-contrast p{font-size:16px}
+.nasal-switcher{grid-template-columns:repeat(2,minmax(0,1fr))}
+.three-pairs .nasal-switcher{grid-template-columns:repeat(3,minmax(0,1fr))}
+.articulation-images{grid-template-columns:repeat(var(--sound-count,2),minmax(0,1fr))}
+.articulation-images img+img{border-left:1px solid rgba(36,41,181,.2)}
+.articulation-figure figcaption{grid-template-columns:repeat(var(--sound-count,2),minmax(0,1fr))}
+.articulation-figure figcaption>span{grid-template-columns:58px auto 1fr;min-width:0}
+.articulation-figure figcaption i{min-width:0;line-height:1.45}
+.articulation-figure figcaption .audio-trigger{--audio-color:#2429B5;width:58px;height:74px;margin:0;border:0;border-right:1px solid rgba(36,41,181,.2);background:transparent}
+.articulation-figure figcaption .audio-trigger:hover svg,.articulation-figure figcaption .audio-trigger:focus-visible svg{color:#E9E7DF}
+.articulation-figure figcaption.no-audio>span{grid-template-columns:90px 1fr;padding:0 16px}
+.articulation-figure figcaption.no-audio b{margin:0;font-size:16px}
+.three-sounds .articulation-copy{grid-column:1/-1;max-width:720px;margin-bottom:36px}
+.three-sounds .articulation-figure,.three-sounds .articulation-note{grid-column:1/-1}
+.family-list[data-memory-list]{grid-template-columns:repeat(2,minmax(0,1fr));gap:0 20px}
+.family-list[data-memory-list] article{grid-template-columns:38px minmax(90px,auto) minmax(0,1fr);min-height:190px;padding:24px 12px}
+.family-list[data-memory-list] article>strong{font-size:clamp(44px,4vw,70px);white-space:nowrap}
+.family-list[data-memory-list] article div{gap:7px 12px}
+.family-list[data-memory-list] article b{font-size:clamp(24px,2.4vw,36px);white-space:nowrap}
+.family-list[data-memory-list] article p{font-size:12px}
+.family-list[data-memory-list] article{border-bottom:1px solid rgba(36,41,181,.28)}
+.question-grid article>div{grid-template-columns:repeat(var(--answer-count,2),minmax(0,1fr))}
+.question-grid article>div button{min-width:0}
+@media(max-width:1200px){.sound-contrast article{padding:18px}.family-list[data-memory-list] article{grid-template-columns:36px 74px 1fr}.family-list[data-memory-list] article b{font-size:26px}}
+@media(max-width:980px){.sound-contrast{margin-top:50px}.family-list[data-memory-list]{grid-template-columns:1fr}.family-list[data-memory-list] article{grid-template-columns:40px 110px 1fr}.family-list[data-memory-list] article p{font-size:13px}}
+@media(max-width:680px){.sound-contrast{grid-template-columns:1fr}.sound-contrast article{min-height:0}.sound-contrast article+article{border-left:0;border-top:1px solid rgba(233,231,223,.3)}.articulation-images,.articulation-figure figcaption{grid-template-columns:1fr}.articulation-images img+img{border-left:0;border-top:1px solid rgba(36,41,181,.2)}.articulation-figure figcaption span+span{border-left:0}.family-list[data-memory-list] article{grid-template-columns:34px 72px 1fr;padding:20px 0}.family-list[data-memory-list] article>strong{font-size:52px}.family-list[data-memory-list] article b{font-size:25px}}
+.family-list[data-memory-list].common-memory{gap:0 20px}
+.family-list[data-memory-list].common-memory .common-sound-group{display:block;min-height:0;padding:24px 0 30px}
+.common-sound-group h3{margin:0 0 20px;color:#E87950;font:500 24px/1.2 "Source Han Sans SC",sans-serif}
+.family-list[data-memory-list] .common-chars{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px 8px}
+.family-list[data-memory-list] .common-char{display:flex;flex-direction:column;align-items:flex-start;gap:8px;min-width:0;color:#2429B5}
+.family-list[data-memory-list] .common-char b{font:400 clamp(38px,3.5vw,58px)/1.15 "Source Han Serif SC",serif}
+.family-list[data-memory-list] .common-char small{color:#666660;font:12px/1.4 "Source Han Sans SC",sans-serif}
+.family-list[data-memory-list] .family-root{display:flex;flex-direction:column;align-items:flex-start;gap:8px}
+.family-list[data-memory-list] .family-root small,.family-list[data-memory-list] .family-related small{display:block;color:#666660;font:12px/1.3 "Source Han Sans SC",sans-serif}
+.family-list[data-memory-list] .family-related{display:flex;flex-direction:column;align-items:flex-start;gap:8px}
+.family-list[data-memory-list] .family-common{grid-column:1/-1;margin-top:24px;padding-top:16px;border-top:1px solid rgba(36,41,181,.18)}
+.family-list[data-memory-list] .family-common h3{margin:0 0 16px;color:#666660;font:500 13px/1.3 "Source Han Sans SC",sans-serif}
+.family-list[data-memory-list] .family-common .common-chars{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px 8px}
+@media(max-width:980px){.family-list[data-memory-list].common-memory{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:680px){.family-list[data-memory-list].common-memory{grid-template-columns:1fr}.family-list[data-memory-list] .common-chars{grid-template-columns:repeat(4,minmax(0,1fr))}.family-list[data-memory-list] .common-char b{font-size:46px}}
+@media(max-width:680px){.three-pairs .nasal-switcher{grid-template-columns:repeat(3,minmax(0,1fr))}.family-list[data-memory-list] .family-common .common-chars{grid-template-columns:repeat(4,minmax(0,1fr))}}

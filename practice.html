@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#E9E7DF">
+  <meta name="description" content="按发音专题、题型或混合方式练习普通话辨音与拼音。">
+  <title>练习｜字觉 ZIJUE</title>
+  <script>const previousTopic=new URLSearchParams(location.search).get('topic');if(previousTopic==='nasal')location.replace('nasal-an-ang.html');else if(['retroflex','nl','other'].includes(previousTopic))location.replace('topic-detail.html?topic='+previousTopic);</script>
+  <link rel="stylesheet" href="styles.css?v=20261125-1">
+  <link rel="stylesheet" href="mouth-cursor.css?v=20261124-11">
+  <link rel="stylesheet" href="practice-topics.css?v=20261125-2">
+</head>
+<body data-page="practice">
+  <a class="skip" href="#main">跳到主要内容</a>
+  <header class="nav-shell"><a class="brand" href="index.html?from=site"><b>字觉</b><span>ZIJUE</span></a><nav aria-label="主要导航"><a href="basics.html">拼音基础</a><a href="correction.html">发音修正</a><a href="characters.html">读音字库</a><a aria-current="page" href="practice.html">练习</a><a href="notes.html">发音手册</a></nav><span class="nav-index">PRACTICE / 05</span></header>
+  <main id="main" class="practice-topic">
+    <section class="practice-topic-head frame-grid">
+      <div class="meta-row"><a href="correction.html#topics">← 返回专题选择</a><span id="topic-index">PRACTICE / 01</span></div>
+      <p class="topic-kicker" id="topic-kicker">发音专题</p>
+      <h1 id="topic-title">选择一组发音，<br>开始练习</h1>
+      <p id="topic-intro">从需要改善的发音差异进入听辨、发音位置、常用字词与录音自查。</p>
+      <i class="orange-square" aria-hidden="true"></i>
+    </section>
+    <section class="practice-mode-picker frame-grid" id="practice-modes" aria-labelledby="mode-title" hidden>
+      <header><h2 id="mode-title">选择一种练法</h2><p>知道难点就进入对应专题练习；想检查多组发音，就从完整字库里抽取一批混合题。</p></header>
+      <nav aria-label="练习类型">
+        <a href="correction.html#topics"><span>专项练习</span><strong>按发音专题练</strong><small>每个小专题都有对应的大字选择题</small></a>
+        <a href="practice.html?mode=mixed"><span>综合练习</span><strong>做混合选择题</strong><small>每轮从多个专题的大字库随机抽取</small></a>
+        <a href="notes.html#tongue-twisters"><span>朗读材料</span><strong>进入绕口令</strong><small>按发音难点挑选短句慢读</small></a>
+      </nav>
+    </section>
+    <section class="practice-topic-options frame-grid" aria-labelledby="options-title">
+      <div class="options-head"><h2 id="options-title">选择训练项</h2><span id="option-count">04 ITEMS</span></div>
+      <div class="practice-option-list" id="practice-options"></div>
+      <aside class="practice-diagram" id="practice-diagram" aria-label="发音图解" hidden>
+        <header><div><span>发音图解</span><strong data-practice-diagram-title aria-live="polite">in / ing</strong></div><div class="practice-diagram-controls"><button type="button" data-practice-diagram-prev aria-label="上一张图解"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5 8 12l7 7"/></svg></button><span data-practice-diagram-count>01 / 02</span><button type="button" data-practice-diagram-next aria-label="下一张图解"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></button></div></header>
+        <figure><img data-practice-diagram-image src="assets/pronunciation/Y08_01_in.png" alt="in 前鼻韵母发音图解" width="1536" height="1024" loading="lazy" decoding="async"></figure>
+        <small class="diagram-disclaimer">AI 辅助生成的发音示意图，形状和位置可能不准确；请结合文字与示范音辨别，不可作为医学影像或唯一发音标准。</small>
+        <p data-practice-diagram-copy>选择训练项后，在这里查看对应的发音位置与口型图解。</p>
+        <div class="practice-method" aria-label="本组训练指导"><h3>怎么训练</h3><ol data-practice-method-steps></ol></div>
+      </aside>
+      <p class="practice-status" id="practice-status" aria-live="polite">选择训练项后，将从听辨差异开始。</p>
+    </section>
+    <section class="practice-paper frame-grid" id="comprehensive-practice" aria-labelledby="paper-title" hidden>
+      <div class="paper-head"><div><span>CHARACTER CHOICE / 大字选择</span><h2 id="paper-title">混合选择练习</h2></div><p id="paper-description">先读出大字，再选择对应的声母或韵母。选择后显示拼音，每轮都会从字库中换一批题。</p></div>
+      <div class="choice-summary"><strong><span id="paper-score">0</span> / <span id="paper-total">12</span></strong><p id="paper-result" aria-live="polite">选择答案后即时核对。</p></div>
+      <div class="choice-grid" id="choice-grid" aria-live="polite"></div>
+      <div class="paper-submit"><button id="paper-reset" type="button">重新测试</button><p>重新测试会更换题目并打乱顺序。</p></div>
+    </section>
+  </main>
+  <footer><a class="brand" href="index.html?from=site"><b>字觉</b><span>ZIJUE</span></a><p>按专题、题型或混合方式练习</p><p><a class="site-source-link" href="notes.html#sources">资料与使用说明</a></p></footer>
+  <script src="practice-data.js?v=20261125-7"></script>
+  <script src="practice-topic.js?v=20261125-3"></script>
+  <script src="mouth-cursor.js?v=20261124-11"></script>
+  <script src="sound-settings.js?v=20261124-1"></script>
+</body>
+</html>

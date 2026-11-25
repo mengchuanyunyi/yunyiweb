@@ -1,0 +1,113 @@
+.hanzi {
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: stretch;
+  min-height: 210px;
+  padding: 0;
+  text-align: initial;
+}
+
+.hanzi-core {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-width: 0;
+  min-height: 210px;
+  padding: 34px 14px 18px;
+  transition: transform .34s cubic-bezier(.22,.7,.25,1);
+}
+
+.hanzi small {
+  left: 50%;
+  top: 14px;
+  transform: translate(-50%,4px);
+  white-space: nowrap;
+}
+
+.hanzi-grid[data-pinyin="all"] .hanzi small,
+.hanzi-grid[data-pinyin="hover"] .hanzi:hover small,
+.hanzi-grid[data-pinyin="hover"] .hanzi.pinned small {
+  transform: translate(-50%,0);
+}
+
+.hanzi small i {
+  min-width: auto;
+  height: 20px;
+  padding: 0 7px;
+}
+
+.word-panel {
+  position: relative;
+  display: none;
+  align-content: center;
+  gap: 11px;
+  min-width: 0;
+  padding: 34px 14px 24px 24px;
+  user-select: none;
+  pointer-events: none;
+}
+
+.word-panel::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 28px;
+  bottom: 28px;
+  width: 1px;
+  background: rgba(36,41,181,.3);
+}
+
+.word-label {
+  display: block;
+  margin-bottom: 4px;
+  color: #E87950;
+  font: 500 10px/1 "Source Han Sans SC",sans-serif;
+  letter-spacing: .12em;
+}
+
+.word-example {
+  display: block;
+  color: #2429B5;
+  font: 500 17px/1.25 "Source Han Sans SC",sans-serif;
+  white-space: nowrap;
+}
+
+.hanzi.is-expanded {
+  grid-column: span 1;
+  /* The words are visually much narrower than the display character, so a
+     mathematically even split reads left-heavy. This split centres the
+     combined character + words silhouette inside the active tile. */
+  grid-template-columns: minmax(0,58%) minmax(0,42%);
+  background: rgba(165,169,216,.16);
+}
+
+.hanzi.is-expanded .hanzi-core {
+  transform: none;
+}
+
+.hanzi.is-expanded .word-panel {
+  display: grid;
+}
+
+.hanzi:hover,
+.hanzi.is-expanded {
+  background: rgba(165,169,216,.16);
+}
+
+.hanzi:focus-visible {
+  outline: 2px solid #E87950;
+  outline-offset: -2px;
+}
+
+@media (max-width:1050px) {
+  .hanzi.is-expanded {
+    grid-column: span 1;
+  }
+  .word-example {
+    font-size: 15px;
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .hanzi-core { transition: none; }
+}

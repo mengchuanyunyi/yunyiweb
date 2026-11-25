@@ -1,0 +1,21 @@
+.final-filter{display:block!important;margin:18px 0 34px!important;border-top:1px solid rgba(36,41,181,.16)}
+.filter-global{display:grid;grid-template-columns:112px minmax(0,1fr);align-items:center;min-height:58px;border-bottom:1px solid rgba(36,41,181,.16)}
+.filter-global>span{color:var(--muted);font:12px var(--sans);letter-spacing:.04em}
+.filter-tabs{display:grid;grid-template-columns:repeat(4,minmax(130px,1fr));gap:4px;padding:8px 0}
+.filter-tabs button,.comparison-group button{border:1px solid var(--lav);background:transparent;color:var(--blue);font:600 12px var(--sans);cursor:pointer;transition:background-color .18s ease,color .18s ease,border-color .18s ease}
+.filter-tabs button{height:38px;padding:0 14px;white-space:nowrap}
+.filter-category{border-bottom:1px solid rgba(36,41,181,.16)}
+.filter-category[hidden]{display:none}
+.comparison-filter{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:28px;padding:4px 0}
+.comparison-group{display:grid;grid-template-columns:92px minmax(0,1fr);align-items:center;min-width:0;min-height:46px;border-bottom:1px solid rgba(36,41,181,.12)}
+.comparison-group:nth-last-child(-n+2){border-bottom:0}
+.comparison-group>span{color:var(--blue);font:600 12px var(--sans);letter-spacing:.02em}
+.comparison-group>div{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(54px,1fr);gap:3px;min-width:0;padding:6px 0}
+.comparison-group button{height:32px}
+.filter-tabs button:hover,.comparison-group button:hover{border-color:var(--blue);background:rgba(165,169,216,.12)}
+.filter-tabs button:focus-visible,.comparison-group button:focus-visible{outline:2px solid var(--orange);outline-offset:2px}
+.filter-tabs button.active,.comparison-group button.active{border-color:var(--blue);background:var(--blue);color:var(--paper)}
+.library-scope{grid-template-columns:110px minmax(0,980px)!important}
+@media(max-width:900px){.filter-global{grid-template-columns:100px minmax(0,1fr)}.filter-tabs{grid-template-columns:repeat(2,minmax(120px,1fr))}.comparison-filter{grid-template-columns:1fr}.comparison-group{grid-template-columns:90px minmax(0,1fr)}.comparison-group:nth-last-child(-n+2){border-bottom:1px solid rgba(36,41,181,.12)}.comparison-group:last-child{border-bottom:0}}
+@media(max-width:560px){.filter-global{grid-template-columns:1fr}.filter-global>span{padding-top:12px}.filter-tabs{grid-template-columns:1fr 1fr}.filter-tabs button{white-space:normal}.comparison-group{grid-template-columns:72px minmax(0,1fr)}.comparison-group>div{grid-auto-columns:minmax(48px,1fr)}}
+@media(prefers-reduced-motion:reduce){.filter-tabs button,.comparison-group button{transition-duration:.01ms}}

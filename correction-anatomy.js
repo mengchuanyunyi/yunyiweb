@@ -1,0 +1,11 @@
+const q=selector=>document.querySelector(selector);
+const qa=selector=>[...document.querySelectorAll(selector)];
+const anatomyImage=q('[data-anatomy-image]');
+const anatomyDefault='assets/oral-anatomy-default.png';
+const anatomyImages={alveolar:'assets/oral-anatomy-alveolar.png',hard:'assets/oral-anatomy-hard-palate.png',soft:'assets/oral-anatomy-soft-palate.png',tip:'assets/oral-anatomy-tongue-tip.png',surface:'assets/oral-anatomy-tongue-surface.png',root:'assets/oral-anatomy-tongue-root.png',nasal:'assets/oral-anatomy-nasal-cavity.png',oral:'assets/oral-anatomy-oral-cavity.png'};
+const anatomyLabels={alveolar:'上齿龈',hard:'硬腭',soft:'软腭',tip:'舌尖',surface:'舌面',root:'舌根',nasal:'鼻腔',oral:'口腔'};
+Object.values(anatomyImages).forEach(src=>{const preload=new Image();preload.src=src});
+const anatomyTargets=qa('.anatomy-list [data-part],.anatomy-hotspots [data-part]');
+const setAnatomyPart=part=>{if(!anatomyImage||!anatomyImages[part])return;anatomyImage.src=anatomyImages[part];anatomyImage.alt=`普通话发音部位：${anatomyLabels[part]}`;anatomyTargets.forEach(item=>item.classList.toggle('active',item.dataset.part===part))};
+const clearAnatomyPart=()=>{if(!anatomyImage)return;anatomyImage.src=anatomyDefault;anatomyImage.alt='普通话发音相关口腔与鼻腔剖面图';anatomyTargets.forEach(item=>item.classList.remove('active'))};
+anatomyTargets.forEach(target=>{target.addEventListener('mouseenter',()=>setAnatomyPart(target.dataset.part));target.addEventListener('mouseleave',clearAnatomyPart);target.addEventListener('focus',()=>setAnatomyPart(target.dataset.part));target.addEventListener('blur',clearAnatomyPart)});

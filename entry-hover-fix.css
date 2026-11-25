@@ -1,0 +1,9 @@
+.entry-row{position:relative;padding-left:26px;padding-right:26px;cursor:pointer;transition:background-color .36s cubic-bezier(.22,.7,.25,1),color .36s cubic-bezier(.22,.7,.25,1)}
+.entry-row:hover,.entry-row:focus-within{background:#2429B5;color:#E9E7DF}
+.entry-row:hover h2,.entry-row:hover p,.entry-row:hover>a,.entry-row:hover>button,.entry-row:hover .entry-action,.entry-row:focus-within h2,.entry-row:focus-within p,.entry-row:focus-within>a,.entry-row:focus-within>button,.entry-row:focus-within .entry-action{color:#E9E7DF}
+.entry-row:hover>span:first-child,.entry-row:focus-within>span:first-child{background:transparent;color:#E9E7DF}
+.entry-row:hover .direction-default,.entry-row:focus-within .direction-default{opacity:0;visibility:hidden}
+.entry-row:hover .direction-guide,.entry-row:focus-within .direction-guide{opacity:1!important;animation:direction-slide-in .62s cubic-bezier(.16,.76,.18,1) both!important}
+.entry-row:hover .direction-guide path,.entry-row:focus-within .direction-guide path{animation:none!important;stroke-dasharray:none!important;stroke-dashoffset:0!important}
+.entry-row .direction-guide{right:32px!important;bottom:-35px!important;top:auto!important;width:138px!important;height:108px!important}
+.entry-row .direction-guide svg{stroke-width:2.8!important}

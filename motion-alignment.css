@@ -1,0 +1,1 @@
+.text-action:hover .direction-guide,.text-action:focus-visible .direction-guide{animation-name:direction-slide-down-center!important}@keyframes direction-slide-down-center{0%{opacity:1;transform:translate(-50%,-74px)}100%{opacity:1;transform:translate(-50%,0)}}

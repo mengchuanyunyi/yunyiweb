@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#E9E7DF">
+  <meta name="description" content="从声母、韵母和整体认读音节开始认识汉语拼音。">
+  <title>拼音基础｜字觉 ZIJUE</title>
+  <link rel="stylesheet" href="styles.css?v=20261125-1">
+  <link rel="stylesheet" href="mouth-cursor.css?v=20261124-11">
+  <link rel="stylesheet" href="basics.css?v=20261124-15">
+  <link rel="stylesheet" href="pronunciation-pilot.css?v=20261124-14">
+  <link rel="stylesheet" href="audio-player.css?v=20261124-4">
+  <link rel="stylesheet" href="sound-settings.css?v=20261124-2">
+</head>
+<body data-page="basics">
+  <a class="skip" href="#main">跳到主要内容</a>
+  <header class="nav-shell"><a class="brand" href="index.html?from=site"><b>字觉</b><span>ZIJUE</span></a><nav aria-label="主要导航"><a aria-current="page" href="basics.html">拼音基础</a><a href="correction.html">发音修正</a><a href="characters.html">读音字库</a><a href="practice.html">练习</a><a href="notes.html">发音手册</a></nav><span class="nav-index">BASICS / 02</span></header>
+  <main id="main">
+    <section class="basics-hero frame-grid">
+      <div class="meta-row"><span>ZIJUE / PINYIN BASICS</span><span>01 — 04</span></div>
+      <h1>从拼音学起</h1>
+      <p>先认识一个音节怎样组成，再分别看清声母、韵母和整体认读音节。点击字母本身，就可以查看图解并听标准发音示范。</p>
+      <i class="orange-square" aria-hidden="true"></i>
+      <nav class="basics-map" aria-label="拼音基础目录">
+        <a href="#initials"><span>01</span><strong>声母</strong><small>音节开头的辅音部分</small></a>
+        <a href="#finals"><span>02</span><strong>韵母</strong><small>音节中声母后面的部分</small></a>
+        <a href="#whole-syllables"><span>03</span><strong>整体认读音节</strong><small>作为完整音节直接认读</small></a>
+        <a href="#spelling"><span>04</span><strong>拼写规则</strong><small>下一阶段继续丰富</small></a>
+      </nav>
+    </section>
+
+    <section class="initials-section" id="initials">
+      <div class="basics-section-head frame-grid">
+        <div class="meta-row"><span>INITIALS / 声母</span><span>21 + Y / W</span></div>
+        <h2>声母</h2>
+      </div>
+      <div class="initial-viewer-option frame-grid"><button type="button" data-initial-toggle aria-expanded="false" aria-controls="initial-viewer">显示图解</button></div>
+      <div class="phonetic-groups frame-grid">
+        <article data-initial-group="bilabial" data-initials="b p m" tabindex="0"><span>双唇音</span><strong><button type="button" data-initial="b">b</button><button type="button" data-initial="p">p</button><button type="button" data-initial="m">m</button></strong><small>3</small></article>
+        <article data-initial-group="labiodental" data-initials="f" tabindex="0"><span>唇齿音</span><strong><button type="button" data-initial="f">f</button></strong><small>1</small></article>
+        <article data-initial-group="alveolar" data-initials="d t n l" tabindex="0"><span>舌尖中音</span><strong><button type="button" data-initial="d">d</button><button type="button" data-initial="t">t</button><button type="button" data-initial="n">n</button><button type="button" data-initial="l">l</button></strong><small>4</small></article>
+        <article data-initial-group="velar" data-initials="g k h" tabindex="0"><span>舌根音</span><strong><button type="button" data-initial="g">g</button><button type="button" data-initial="k">k</button><button type="button" data-initial="h">h</button></strong><small>3</small></article>
+        <article data-initial-group="palatal" data-initials="j q x" tabindex="0"><span>舌面音</span><strong><button type="button" data-initial="j">j</button><button type="button" data-initial="q">q</button><button type="button" data-initial="x">x</button></strong><small>3</small></article>
+        <article data-initial-group="retroflex" data-initials="zh ch sh r" tabindex="0"><span>舌尖后音</span><strong><button type="button" data-initial="zh">zh</button><button type="button" data-initial="ch">ch</button><button type="button" data-initial="sh">sh</button><button type="button" data-initial="r">r</button></strong><small>4</small></article>
+        <article data-initial-group="dental" data-initials="z c s" tabindex="0"><span>舌尖前音</span><strong><button type="button" data-initial="z">z</button><button type="button" data-initial="c">c</button><button type="button" data-initial="s">s</button></strong><small>3</small></article>
+        <article class="spelling-letter" data-initial-group="spelling" data-initials="y w" tabindex="0"><span>拼写中的字母</span><strong><button type="button" data-initial="y">y</button><button type="button" data-initial="w">w</button></strong><small>2</small><p>y、w 也有对应的发音图解；同时用于零声母音节的拼写与音节分隔。</p></article>
+        <aside class="initial-viewer" id="initial-viewer" aria-label="声母发音图解" hidden>
+          <header><div><span data-initial-group-label>发音图解</span><strong data-initial-title aria-live="polite">b</strong></div><div class="initial-viewer-controls"><button type="button" data-initial-prev aria-label="上一个声母"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5 8 12l7 7"/></svg></button><span data-initial-count>01 / 23</span><button type="button" data-initial-next aria-label="下一个声母"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></button></div></header>
+          <nav data-initial-choices aria-label="当前分组声母"></nav>
+          <figure><img data-initial-image src="assets/pronunciation/S01_01_b.png" alt="b 双唇音发音图解" loading="lazy" decoding="async"></figure>
+          <small class="diagram-disclaimer">AI 辅助生成的发音示意图，形状和位置可能不准确；请结合文字与示范音辨别，不可作为医学影像或唯一发音标准。</small>
+          <p data-initial-copy>上下唇共同形成阻碍。观察图中标出的发音位置与口腔动作。</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="finals-section frame-grid" id="finals">
+      <div class="basics-section-head">
+        <div class="meta-row"><span>FINALS / 韵母</span><span>24 FINALS</span></div>
+        <h2>韵母</h2>
+        <p>韵母可以单独构成音节，也可以接在声母后面。</p>
+      </div>
+      <div class="pronunciation-option"><button type="button" data-pronunciation-toggle aria-expanded="false" aria-controls="pronunciation-pilot">显示图解</button></div>
+      <div class="final-groups">
+        <article><span>01 / 单韵母</span><strong><button class="pronunciation-trigger" type="button" data-pronunciation="a" aria-controls="pronunciation-pilot">a</button><button class="pronunciation-trigger" type="button" data-pronunciation="o" aria-controls="pronunciation-pilot">o</button><button class="pronunciation-trigger" type="button" data-pronunciation="e" aria-controls="pronunciation-pilot">e</button><button class="pronunciation-trigger" type="button" data-pronunciation="i" aria-controls="pronunciation-pilot">i</button><button class="pronunciation-trigger" type="button" data-pronunciation="u" aria-controls="pronunciation-pilot">u</button><button class="pronunciation-trigger" type="button" data-pronunciation="ü" aria-controls="pronunciation-pilot">ü</button></strong><small>6</small></article>
+        <article><span>02 / 复韵母</span><strong><button class="pronunciation-trigger" type="button" data-pronunciation="ai" aria-controls="pronunciation-pilot">ai</button><button class="pronunciation-trigger" type="button" data-pronunciation="ei" aria-controls="pronunciation-pilot">ei</button><button class="pronunciation-trigger" type="button" data-pronunciation="ui" aria-controls="pronunciation-pilot">ui</button><button class="pronunciation-trigger" type="button" data-pronunciation="ao" aria-controls="pronunciation-pilot">ao</button><button class="pronunciation-trigger" type="button" data-pronunciation="ou" aria-controls="pronunciation-pilot">ou</button><button class="pronunciation-trigger" type="button" data-pronunciation="iu" aria-controls="pronunciation-pilot">iu</button><button class="pronunciation-trigger" type="button" data-pronunciation="ie" aria-controls="pronunciation-pilot">ie</button><button class="pronunciation-trigger" type="button" data-pronunciation="üe" aria-controls="pronunciation-pilot">üe</button></strong><small>8</small></article>
+        <article><span>03 / 特殊韵母</span><strong><button class="pronunciation-trigger" type="button" data-pronunciation="er" aria-controls="pronunciation-pilot">er</button></strong><small>1</small></article>
+        <article><span>04 / 前鼻韵母</span><strong><button class="pronunciation-trigger" type="button" data-pronunciation="an" aria-controls="pronunciation-pilot">an</button><button class="pronunciation-trigger" type="button" data-pronunciation="en" aria-controls="pronunciation-pilot">en</button><button class="pronunciation-trigger" type="button" data-pronunciation="in" aria-controls="pronunciation-pilot">in</button><button class="pronunciation-trigger" type="button" data-pronunciation="un" aria-controls="pronunciation-pilot">un</button><button class="pronunciation-trigger" type="button" data-pronunciation="ün" aria-controls="pronunciation-pilot">ün</button></strong><small>5</small></article>
+        <article><span>05 / 后鼻韵母</span><strong><button class="pronunciation-trigger" type="button" data-pronunciation="ang" aria-controls="pronunciation-pilot">ang</button><button class="pronunciation-trigger" type="button" data-pronunciation="eng" aria-controls="pronunciation-pilot">eng</button><button class="pronunciation-trigger" type="button" data-pronunciation="ing" aria-controls="pronunciation-pilot">ing</button><button class="pronunciation-trigger" type="button" data-pronunciation="ong" aria-controls="pronunciation-pilot">ong</button></strong><small>4</small></article>
+      </div>
+      <div class="pronunciation-pilot" id="pronunciation-pilot" aria-label="韵母发音图解" hidden>
+        <header>
+          <div><span>发音图解</span><strong data-pronunciation-title aria-live="polite">in</strong></div>
+          <div class="pronunciation-controls">
+            <button type="button" data-pronunciation-prev aria-label="上一张发音图解"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5 8 12l7 7"/></svg></button>
+            <span data-pronunciation-count>01 / 02</span>
+            <button type="button" data-pronunciation-next aria-label="下一张发音图解"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></button>
+          </div>
+        </header>
+        <figure><img data-pronunciation-image src="assets/pronunciation/Y08_01_in.png" alt="in 前鼻韵母发音图解" width="1536" height="1024" loading="lazy" decoding="async"></figure>
+        <small class="diagram-disclaimer">AI 辅助生成的发音示意图，形状和位置可能不准确；请结合文字与示范音辨别，不可作为医学影像或唯一发音标准。</small>
+        <p data-pronunciation-copy>当前展示中性口腔示意；已完成的正式图解会在选择对应韵母时自动显示。</p>
+      </div>
+    </section>
+
+    <section class="whole-section" id="whole-syllables">
+      <div class="basics-section-head frame-grid">
+        <div class="meta-row"><span>WHOLE SYLLABLES / 整体认读音节</span><span>16 SYLLABLES</span></div>
+        <h2>整体认读音节</h2>
+        <p>教学中通常把下面 16 个音节作为一个整体直接认读，不在这里拆成声母和韵母练习。</p>
+      </div>
+      <div class="whole-grid frame-grid" aria-label="十六个整体认读音节">
+        <span>zhi</span><span>chi</span><span>shi</span><span>ri</span>
+        <span>zi</span><span>ci</span><span>si</span><span>yi</span>
+        <span>wu</span><span>yu</span><span>ye</span><span>yue</span>
+        <span>yuan</span><span>yin</span><span>yun</span><span>ying</span>
+      </div>
+    </section>
+
+    <section class="spelling-preview frame-grid" id="spelling">
+      <div class="meta-row"><span>NEXT / SPELLING</span><span>04</span></div>
+      <h2>接下来，<br>把声音写正确</h2>
+      <p>认识声母和韵母之后，还要知道声调写在哪里、零声母音节怎样改写，以及什么时候需要隔音符号。</p>
+      <i class="orange-square" aria-hidden="true"></i>
+    </section>
+
+    <section class="spelling-rules" aria-labelledby="spelling-rules-title">
+      <div class="spelling-rules-head frame-grid">
+        <div class="meta-row"><span>PINYIN ORTHOGRAPHY / 拼音书写规范</span><span>01 — 05</span></div>
+        <h2 id="spelling-rules-title">拼音书写规范</h2>
+        <p>先记住五条最常用的规则。这里讲的是怎样写，具体发音示范将在后续统一接入。</p>
+      </div>
+      <div class="rule-list frame-grid">
+        <article>
+          <span class="rule-number">01</span>
+          <h3>标调规则</h3>
+          <div><strong>有 a 在给 a 戴，没 a 在 o、e 戴；要是 i、u 一起来，谁在后面给谁戴。</strong><p>小贴士：i 标调时，去掉上方的小点，例如 <b>nǐ</b>。</p></div>
+        </article>
+        <article>
+          <span class="rule-number">02</span>
+          <h3>y、w 改写规则</h3>
+          <div><strong>零声母音节需要按 i、u、ü 的拼写规则改写。</strong><p>小贴士：i 开头时使用 y，例如 ian 写作 <b>yan</b>，不能写成 yian；ü 开头时加 y 并省去两点；u 开头时使用 w。</p></div>
+        </article>
+        <article>
+          <span class="rule-number">03</span>
+          <h3>j、q、x、y 与 ü</h3>
+          <div><strong>j、q、x、y 和 ü 相拼，书写时省略 ü 的两点。</strong><p>小贴士：省去的是书写符号，读音仍然是 ü，例如 <b>ju、qu、xu、yu</b>。</p></div>
+        </article>
+        <article>
+          <span class="rule-number">04</span>
+          <h3>整体认读音节</h3>
+          <div><strong>16 个整体认读音节作为完整音节直接认读。</strong><p>小贴士：教学中不把它们拆开拼读；<b>yan</b> 不属于整体认读音节，它只是零声母音节的特殊书写形式。</p></div>
+        </article>
+        <article>
+          <span class="rule-number">05</span>
+          <h3>隔音符号</h3>
+          <div><strong>a、o、e 开头的音节接在其他音节后面，界限容易混淆时使用隔音符号。</strong><p>小贴士：例如 <b>pí’ǎo（皮袄）</b>，隔音符号让两个音节的边界更清楚。</p></div>
+        </article>
+      </div>
+    </section>
+  </main>
+  <footer><a class="brand" href="index.html?from=site"><b>字觉</b><span>ZIJUE</span></a><p>拼音基础 / PINYIN BASICS</p><p><a class="site-source-link" href="notes.html#sources">资料与使用说明</a></p></footer>
+  <script src="script.js?v=20261124-13"></script>
+  <script src="initials-viewer.js?v=20261125-1"></script>
+  <script src="pronunciation-viewer.js?v=20261124-13"></script>
+  <script src="sound-settings.js?v=20261124-1"></script>
+  <script src="audio-player.js?v=20261124-4"></script>
+  <script src="mouth-cursor.js?v=20261124-12"></script>
+</body>
+</html>

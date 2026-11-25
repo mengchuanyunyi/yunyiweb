@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#E9E7DF">
+  <meta name="description" content="按发音专题浏览训练汉字，在字形与拼音之间建立联系。">
+  <title>读音字库｜字觉 ZIJUE</title>
+  <link rel="stylesheet" href="styles.css?v=20261125-1"><link rel="stylesheet" href="mouth-cursor.css?v=20261124-11"><link rel="stylesheet" href="refinements.css"><link rel="stylesheet" href="character-refinements.css"><link rel="stylesheet" href="character-words.css"><link rel="stylesheet" href="character-filter.css?v=20261122-6">
+</head>
+<body data-page="characters">
+  <a class="skip" href="#main">跳到主要内容</a>
+  <header class="nav-shell"><a class="brand" href="index.html?from=site"><b>字觉</b><span>ZIJUE</span></a><nav aria-label="主要导航"><a href="basics.html">拼音基础</a><a href="correction.html">发音修正</a><a aria-current="page" href="characters.html">读音字库</a><a href="practice.html">练习</a><a href="notes.html">发音手册</a></nav><span class="nav-index">CHARACTER INDEX / 04</span></header>
+  <main id="main" class="character-page frame-grid">
+    <section class="character-head">
+      <div class="meta-row"><span>ZIJUE / 读音字库</span><span>当前收录：<b data-character-count>—</b> 字</span></div>
+      <h1>读音字库</h1>
+      <div class="library-scope"><strong>收录范围</strong><p>这里不是完整汉字全集。本站按发音专题收录生活常用字，并补充少量有辨析价值的次常用字；同一个字可以同时归入声母与韵母专题。多音字以当前练习读音为主，不作字典式的全部读音罗列；只有下方展示的组词实际使用了不同读音时，才以斜杠并列标注。极生僻字、其他特殊读音与未收录用字，请查阅最新版权威字典。</p></div>
+    </section>
+    <section class="character-tools" aria-label="字库显示控制">
+      <div class="tool-row"><span>拼音</span><div class="segmented" data-control="pinyin"><button data-value="all">全部</button><button class="active" data-value="hover">悬停</button><button data-value="none">隐藏</button></div></div>
+      <div class="tool-row"><span>字体</span><div class="segmented" data-control="font"><button class="active" data-value="serif">思源宋体</button><button data-value="sans">思源黑体</button></div></div>
+      <div class="tool-row"><label for="size">字号</label><input id="size" type="range" min="72" max="156" value="112"><output for="size">112px</output></div>
+      <div class="tool-row"><span>字重</span><div class="segmented" data-control="weight"><button data-value="300">轻</button><button class="active" data-value="500">中性</button><button data-value="700">粗</button></div></div>
+      <div class="final-filter" role="group" aria-label="发音对比专题筛选">
+        <div class="filter-global"><span>全部字库</span><div class="filter-tabs" role="tablist" aria-label="选择字库分类"><button class="global-show-all active" type="button" role="tab" aria-selected="true" data-final="all">显示全部</button><button class="category-tab" type="button" role="tab" aria-selected="false" aria-controls="nasal-groups" data-category-target="nasal" data-groups-any="an ang en eng in ing ong">前后鼻音对比</button><button class="category-tab" type="button" role="tab" aria-selected="false" aria-controls="initial-groups" data-category-target="initial" data-groups-any="z zh c ch s sh n l f h j q x">声母对比</button><button class="category-tab" type="button" role="tab" aria-selected="false" aria-controls="final-groups" data-category-target="final" data-groups-any="uo ou iu ie üe">易混韵母对比</button></div></div>
+        <section class="filter-category" data-category="nasal" hidden>
+        <div class="comparison-filter" id="nasal-groups" data-category-groups role="tabpanel">
+          <div class="comparison-group"><span>an / ang</span><div><button data-groups-any="an ang">全部</button><button data-final="an">an</button><button data-final="ang">ang</button></div></div>
+          <div class="comparison-group"><span>en / eng</span><div><button data-groups-any="en eng">全部</button><button data-final="en">en</button><button data-final="eng">eng</button></div></div>
+          <div class="comparison-group"><span>in / ing</span><div><button data-groups-any="in ing">全部</button><button data-final="in">in</button><button data-final="ing">ing</button></div></div>
+          <div class="comparison-group"><span>eng / ong</span><div><button data-groups-any="eng ong">全部</button><button data-final="eng">eng</button><button data-final="ong">ong</button></div></div>
+        </div>
+        </section>
+        <section class="filter-category" data-category="initial" hidden>
+        <div class="comparison-filter" id="initial-groups" data-category-groups role="tabpanel">
+          <div class="comparison-group"><span>z / zh</span><div><button data-groups-any="z zh">全部</button><button data-final="z">z</button><button data-final="zh">zh</button></div></div>
+          <div class="comparison-group"><span>c / ch</span><div><button data-groups-any="c ch">全部</button><button data-final="c">c</button><button data-final="ch">ch</button></div></div>
+          <div class="comparison-group"><span>s / sh</span><div><button data-groups-any="s sh">全部</button><button data-final="s">s</button><button data-final="sh">sh</button></div></div>
+          <div class="comparison-group"><span>n / l</span><div><button data-groups-any="n l">全部</button><button data-final="n">n</button><button data-final="l">l</button></div></div>
+          <div class="comparison-group"><span>f / h</span><div><button data-groups-any="f h">全部</button><button data-final="f">f</button><button data-final="h">h</button></div></div>
+          <div class="comparison-group"><span>j / q / x</span><div><button data-groups-any="j q x">全部</button><button data-final="j">j</button><button data-final="q">q</button><button data-final="x">x</button></div></div>
+        </div>
+        </section>
+        <section class="filter-category" data-category="final" hidden>
+        <div class="comparison-filter" id="final-groups" data-category-groups role="tabpanel">
+          <div class="comparison-group"><span>uo / ou</span><div><button data-groups-any="uo ou">全部</button><button data-final="uo">uo</button><button data-final="ou">ou</button></div></div>
+          <div class="comparison-group"><span>ie / üe</span><div><button data-groups-any="ie üe">全部</button><button data-final="ie">ie</button><button data-final="üe">üe</button></div></div>
+          <div class="comparison-group"><span>iu · 独立巩固</span><div><button data-final="iu">全部</button></div></div>
+        </div>
+        </section>
+      </div>
+    </section>
+    <section class="hanzi-grid" data-pinyin="hover" data-font="serif" style="--char-size:112px;--char-weight:500" aria-label="发音专题训练汉字"></section>
+    <p class="character-note"><i class="orange-dot"></i>悬停显示本专题练习读音；点击汉字可展开两个常用组词。若两个组词读音不同，拼音按组词顺序用斜杠标注；其他读音请查阅最新版权威字典。</p>
+  </main>
+  <footer><a class="brand" href="index.html?from=site"><b>字觉</b><span>ZIJUE</span></a><p>读音字库 / CHARACTER INDEX</p><p><a class="site-source-link" href="notes.html#sources">资料与使用说明</a></p></footer>
+  <script src="characters-data.js"></script><script src="script.js?v=20261122-2"></script><script src="mouth-cursor.js?v=20261124-11"></script>
+</body></html>
+

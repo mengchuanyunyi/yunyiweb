@@ -1,0 +1,32 @@
+.pronunciation-trigger{appearance:none;min-width:1.35em;min-height:1.35em;margin:0;padding:.12em .18em;border:0;border-bottom:2px solid transparent;background:transparent;color:inherit;font:inherit;letter-spacing:inherit;cursor:pointer;transition:border-color .2s ease,color .2s ease}
+.final-groups article>strong{display:flex;align-items:baseline;flex-wrap:wrap;gap:.5em}
+.finals-section.pronunciation-open .final-groups article>strong{gap:.34em}
+.pronunciation-trigger:hover,.pronunciation-trigger:focus-visible,.pronunciation-trigger.active{border-bottom-color:#E87950;color:#E87950;outline:0}
+.pronunciation-trigger:focus-visible{box-shadow:0 3px 0 #E9E7DF,0 5px 0 #2429B5}
+.pronunciation-option{grid-column:1/-1;display:flex;justify-content:flex-end;align-items:center;margin-top:40px;color:#2429B5}
+.pronunciation-option span{display:flex;align-items:baseline;gap:12px}
+.pronunciation-option strong{font-size:13px;font-weight:600}
+.pronunciation-option small{color:#666660;font-size:12px}
+.pronunciation-option button{min-width:118px;min-height:42px;padding:0 16px;border:1px solid rgba(36,41,181,.42);background:transparent;color:#2429B5;font:500 12px/1 "Source Han Sans SC",sans-serif;cursor:pointer;transition:background-color .2s ease,color .2s ease}
+.pronunciation-option button:hover,.pronunciation-option button:focus-visible,.pronunciation-option button[aria-expanded="true"]{background:#2429B5;color:#E9E7DF;outline:0}
+.pronunciation-option + .final-groups{margin-top:24px}
+.pronunciation-pilot[hidden]{display:none!important}
+.pronunciation-pilot{grid-column:8/-1;width:100%;align-self:start;margin-top:24px;border-top:1px solid rgba(36,41,181,.34)}
+.finals-section.pronunciation-open .final-groups{grid-column:1/8;padding-right:34px}
+.pronunciation-pilot>header{min-height:74px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(36,41,181,.18)}
+.pronunciation-pilot>header>div:first-child{display:flex;align-items:baseline;gap:28px}
+.pronunciation-pilot>header>div:first-child>span{color:#666660;font-size:13px}
+.pronunciation-pilot>header strong{color:#2429B5;font:500 36px/1 "Source Han Sans SC",sans-serif}
+.pronunciation-controls{display:flex;align-items:center;gap:14px;color:#2429B5}
+.pronunciation-controls button{width:40px;height:40px;display:grid;place-items:center;border:1px solid rgba(36,41,181,.34);background:transparent;color:#2429B5;cursor:pointer;transition:background-color .2s ease,color .2s ease}
+.pronunciation-controls button:hover,.pronunciation-controls button:focus-visible{background:#2429B5;color:#E9E7DF;outline:0}
+.pronunciation-controls svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.pronunciation-controls span{min-width:54px;text-align:center;font-size:12px;font-variant-numeric:tabular-nums}
+.pronunciation-pilot figure{width:100%;min-width:0;margin:0;background:#F2F0E8;border-bottom:1px solid rgba(36,41,181,.18);overflow:visible}
+.pronunciation-pilot img{display:block;width:100%;max-width:100%;height:auto;aspect-ratio:3/2;object-fit:contain;object-position:center}
+.pronunciation-pilot>p{max-width:58em;margin:16px 0 0;color:#666660;font-size:13px;line-height:1.7}
+.pronunciation-pilot .diagram-disclaimer{display:block;margin-top:10px;color:#777771;font-size:10px;line-height:1.55}
+.pronunciation-pilot b{color:#2429B5;font-weight:600}
+@media(max-width:1050px){.finals-section.pronunciation-open .final-groups{grid-column:1/-1;padding-right:0}.pronunciation-pilot{grid-column:3/-1;max-width:720px;justify-self:end}}
+@media(max-width:760px){.pronunciation-option{justify-content:flex-end;align-items:flex-end}.pronunciation-option span{display:block}.pronunciation-option small{display:block;margin-top:5px}.pronunciation-pilot{grid-column:1/-1;margin-top:34px}.pronunciation-pilot>header{min-height:72px}.pronunciation-pilot>header>div:first-child{gap:14px}.pronunciation-pilot>header>div:first-child>span{display:none}.pronunciation-pilot>header strong{font-size:34px}.pronunciation-controls{gap:8px}.pronunciation-controls button{width:40px;height:40px}}
+@media(prefers-reduced-motion:reduce){.pronunciation-trigger,.pronunciation-controls button{transition:none}}

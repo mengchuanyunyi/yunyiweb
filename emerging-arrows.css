@@ -1,0 +1,12 @@
+.emerging-arrow-host{position:relative;overflow:hidden}
+.emerging-guide{position:absolute;right:-12px;bottom:-24px;width:150px;height:112px;color:#E87950;opacity:0;pointer-events:none}
+.emerging-guide svg{display:block;width:100%;height:100%;overflow:visible;fill:none;stroke:currentColor;stroke-width:2.8;stroke-linecap:round;stroke-linejoin:round}
+.emerging-guide path{stroke-dasharray:none;stroke-dashoffset:0}
+.emerging-arrow-host:hover>.emerging-guide,.emerging-arrow-host:focus-visible>.emerging-guide,.entry-row:hover .emerging-guide,.entry-row:focus-within .emerging-guide{opacity:1;animation:emerging-arrow-enter .62s cubic-bezier(.16,.76,.18,1) both}
+.emerging-arrow-host:hover>.emerging-guide path,.emerging-arrow-host:focus-visible>.emerging-guide path,.entry-row:hover .emerging-guide path,.entry-row:focus-within .emerging-guide path{animation:none}
+.topic-card .emerging-guide{right:18px;bottom:-18px;width:172px;height:128px}
+.topic-card:hover .topic-enter,.topic-card:focus-visible .topic-enter{opacity:0}
+.topic-enter{transition:opacity .14s ease}
+.entry-direction .emerging-guide{right:-8px;bottom:-22px}
+@keyframes emerging-arrow-enter{from{opacity:1;transform:translate(-78px,84px)}to{opacity:1;transform:translate(0,0)}}
+@media(prefers-reduced-motion:reduce){.emerging-guide path{animation:none!important;stroke-dashoffset:0}.emerging-arrow-host:hover>.emerging-guide,.emerging-arrow-host:focus-visible>.emerging-guide,.entry-row:hover .emerging-guide,.entry-row:focus-within .emerging-guide{opacity:1}}
