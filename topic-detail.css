@@ -35,7 +35,7 @@
 .common-sound-group h3{margin:0 0 20px;color:#E87950;font:500 24px/1.2 "Source Han Sans SC",sans-serif}
 .family-list[data-memory-list] .common-chars{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px 8px}
 .family-list[data-memory-list] .common-char{display:flex;flex-direction:column;align-items:flex-start;gap:8px;min-width:0;color:#2429B5}
-.family-list[data-memory-list] .common-char b{font:400 clamp(38px,3.5vw,58px)/1.15 "Source Han Serif SC",serif}
+.family-list[data-memory-list] .common-char b{font:400 clamp(38px,3.5vw,58px)/1.15 "ZIJUE Serif SC","Source Han Serif SC",serif}
 .family-list[data-memory-list] .common-char small{color:#666660;font:12px/1.4 "Source Han Sans SC",sans-serif}
 .family-list[data-memory-list] .family-root{display:flex;flex-direction:column;align-items:flex-start;gap:8px}
 .family-list[data-memory-list] .family-root small,.family-list[data-memory-list] .family-related small{display:block;color:#666660;font:12px/1.3 "Source Han Sans SC",sans-serif}
